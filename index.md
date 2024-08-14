@@ -5,7 +5,7 @@ permalink: /
 title: Parallel Speculative Decoding with Adaptive Draft Length
 authors:
     <span class="author-block">Tianyu Liu<sup style="color:#6fbf73;">1</sup><sup>,</sup><sup style="color:#ffac33;">2</sup><sup>,</sup><sup style="color:#007bff;">3</sup><sup>*,</sup>,</span>
-    <span class="author-block">Yun Li<sup style="color:#6fbf73;">1</sup><sup>,</sup><sup style="color:#ffac33;">2</sup>,</span>
+    <span class="author-block">Yun Li<sup style="color:#ffac33;">2</sup>,</span>
     <span class="author-block">Qitan Lv<sup style="color:#6fbf73;">1</sup>,</span>
     <span class="author-block">Kai Liu<sup style="color:#ffac33;">2</sup>,</span>
     <span class="author-block">Jianchen Zhu<sup style="color:#ffac33;">2</sup>,</span>
