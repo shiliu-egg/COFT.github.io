@@ -1,3 +1,4 @@
+---
 layout: project_page
 permalink: /
 title: Coarse-to-Fine Highlighting: Reducing Knowledge Hallucination in Large Language Models
@@ -10,8 +11,12 @@ authors:
     <span class="author-block">Feng Wu<sup style="color:#ffac33;">2</sup>,</span>
 affiliations:
     <sup style="color:#6fbf73;">1</sup>University of Science and Technology of China <br>
+    <sup style="color:#ffac33;">2</sup>Tencent <br>
+    <sup style="color:#007bff;">3</sup>OpenGVLab, Shanghai AI Laboratory <br>
 paper: static/COFT.pdf
 code: https://github.com/shiliu-egg/ICML2024_COFT
+---
+
 
 
 
