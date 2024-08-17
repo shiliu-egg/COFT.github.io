@@ -1,7 +1,6 @@
 ---
 layout: project_page
 permalink: /
-
 title: Coarse-to-Fine Highlighting: Reducing Knowledge Hallucination in Large Language Models
 authors:
     <span class="author-block">Qitan Lv<sup style="color:#6fbf73;">1</sup><sup>,</sup><sup style="color:#ffac33;">2</sup><sup>,</sup><sup style="color:#007bff;">3</sup><sup>*,</sup>,</span>
