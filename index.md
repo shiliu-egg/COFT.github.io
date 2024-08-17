@@ -23,6 +23,18 @@ code: https://github.com/shiliu-egg/ICML2024_COFT
   	</div>
 </center>
 
+<br>
+
+> **TL; DR:** We introduce **COFT** (COarse-to-Fine highlighTing) to focus on different granularity-level key texts, thereby avoiding getting lost in lengthy contexts and reducing knowledge hallucination in large language models. Our COFT:
+>
+> - 🔥 **Over 30% improvement** in F1 score on the knowledge hallucination benchmark [FELM](https://arxiv.org/abs/2310.00741)
+> - 🔥 Effectively alleviates the [Lost in the Middle](https://arxiv.org/abs/2307.03172) issue within LLMs.
+> - 🔥 Exhibits remarkable versatility across various long-form tasks, such as reading comprehension and question answering.
+
+<br>
+
+
+
 <div class="columns is-centered has-text-centered">
     <div class="column is-four-fifths">
         <h2>Abstract</h2>
@@ -56,8 +68,6 @@ comprehension and question answering.
 </div>
 
 
-Our PEARL framework consists of a draft model, a target model and two strategies to decode tokens. The two strategies are switched according to the verification results in the last decoding step.
-
 <center>
     <img style="border-radius: 0.3125em;
     box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" 
@@ -71,28 +81,46 @@ Our PEARL framework consists of a draft model, a target model and two strategies
   	</div>
 </center>
 
-<div class="columns is-centered has-text-centered">
-    <div class="column is-four-fifths">
-        <h2>Appendix: Details of implementations of COFT</h2>
-        <div class="content has-text-justified">
-        </div>
-    </div>
-</div>
+<br>
+We propose a COarse-to-Fine highlighTing method (COFT) that promotes LLMs to focus on key lexical units, preserving complete contextual semantics and avoiding getting lost in long contexts. COFT highlights different granularity-level lexical units in a coarse-to-fine manner, such as paragraphs, sentences, and words. COFT organically integrates three modules in a unified framework.
 
+### Recaller
+The workflow of Recaller is as follows:
 
-We illustrate the algorithm of Our Scorer with Algorithm 1.
+(i) Recaller first conducts named entity recognition on the query to extract named entities that represent keywords within the query. These entities include specific terms and important nouns such as people, places, organizations, etc.
+
+(ii) After obtaining named entities, Recaller leverages them to search one-hop neighbor entities in Wikidata to enrich candidate entities. The named entities and corresponding one-hop neighbors are combined to form candidate entities for the query.
+
+(iii) Recaller finally retains candidate entities that are also present in the reference context, forming the final candidate key entities list.
+
+<br>
+
+### Scorer
+We illustrate the Scorer algorithm in Algorithm 1.
 
 <center>
     <img style="border-radius: 0.3125em;
     box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" 
-    src="static/image/scorer.png" width = "100%" alt=""/>
+    src="static/image/scorer.png" width="100%" alt="Scorer Algorithm"/>
     <br>
     <div style="color:orange; border-bottom: 1px solid #d9d9d9;
     display: inline-block;
     color: #999;
     padding: 2px;">
-  	</div>
+    </div>
 </center>
+
+### Selector
+The workflow of Selector is as follows:
+
+(i) Split the reference context according to the granularity of selected lexical units.
+
+(ii) Calculate the contextual weight of the split lexical units by summing the contextual weight of candidate key entities that occurred in the split.
+
+(iii) Sort these lexical units in descending order by their contextual weight and select the lexical units with contextual weights in the top τ × 100% for highlighting.
+
+<br>
+
 
 <div class="columns is-centered has-text-centered">
     <div class="column is-four-fifths">
