@@ -1,19 +1,20 @@
----
 layout: project_page
 permalink: /
 title: Coarse-to-Fine Highlighting: Reducing Knowledge Hallucination in Large Language Models
 authors:
-    <span class="author-block">Qitan Lv<sup style="color:#6fbf73;">1</sup><sup>,</sup><sup style="color:#ffac33;">2</sup><sup>,</sup><sup style="color:#007bff;">3</sup><sup>*,</sup>,</span>
-    <span class="author-block">Jie Wang<sup style="color:#ffac33;">2</sup>,</span>
-    <span class="author-block">Hanzhu Chen<sup style="color:#6fbf73;">1</sup>,</span>
-    <span class="author-block">Bin Li<sup style="color:#ffac33;">2</sup>,</span>
-    <span class="author-block">Yongdong Zhang<sup style="color:#ffac33;">2</sup>,</span>
-    <span class="author-block">Feng Wu<sup style="color:#ffac33;">2</sup>,</span>
+    - Qitan Lv^1
+    - Jie Wang^1
+    - Hanzhu Chen^1
+    - Bin Li^1
+    - Yongdong Zhang^1
+    - Feng Wu^1
 affiliations:
-    <sup style="color:#6fbf73;">1</sup>University of Science and Technology of China <br>
+    1. University of Science and Technology of China 
+
 paper: static/COFT.pdf
 code: https://github.com/shiliu-egg/ICML2024_COFT
----
+
+
 
 <center>
     <img style="border-radius: 0.3125em;
@@ -85,7 +86,7 @@ Our PEARL framework consists of a draft model, a target model and two strategies
 </div>
 
 
-We illustrate the whole algorithm of COFT with Algorithm 1.
+We illustrate the algorithm of Our Scorer with Algorithm 1.
 
 <center>
     <img style="border-radius: 0.3125em;
