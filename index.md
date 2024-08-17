@@ -32,7 +32,7 @@ significant research interest. Retrieval-augmented
 language model (RALM)—which enhances models with up-to-date knowledge—emerges as a
 promising method to reduce hallucination. However, existing RALMs may instead exacerbate hallucination when retrieving lengthy contexts. To
 address this challenge, we propose COFT, a novel
-            <b>CO</b>b>arse-to-<b>F</b>ine highligh<b>T</b>ing method to focus
+            <b>CO</b>arse-to-<b>F</b>ine highligh<b>T</b>ing method to focus
 on different granularity-level key texts, thereby
 avoiding getting lost in lengthy contexts. Specifically, COFT consists of three components: recaller, scorer, and selector. First, recaller applies
 a knowledge graph to extract potential key entities in a given context. Second, scorer measures
