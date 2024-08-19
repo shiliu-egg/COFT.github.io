@@ -9,6 +9,9 @@ affiliations:
 paper: static/COFT.pdf
 code: https://github.com/shiliu-egg/ICML2024_COFT
 ---
+<div align="center">
+  <h1>Performance Overview</h1>
+</div>
 
 <center>
     <img style="border-radius: 0.3125em;
@@ -35,10 +38,9 @@ code: https://github.com/shiliu-egg/ICML2024_COFT
 
 
 
-<div class="columns is-centered has-text-centered">
-    <div class="column is-four-fifths">
-        <h2>Abstract</h2>
-        <div class="content has-text-justified">
+<div align="center">
+  <h1>Abstract</h1>
+</div>
 Generation of plausible but incorrect factual information, often termed hallucination, has attracted
 significant research interest. Retrieval-augmented
 language model (RALM)—which enhances models with up-to-date knowledge—emerges as a
@@ -59,14 +61,10 @@ comprehension and question answering.
     </div>
 </div>
 
-<div class="columns is-centered has-text-centered">
-    <div class="column is-four-fifths">
-        <h2>Overview of COFT</h2>
-        <div class="content has-text-justified">
-        </div>
-    </div>
-</div>
 
+<div align="center">
+  <h1>Overview of COFT</h1>
+</div>
 
 <center>
     <img style="border-radius: 0.3125em;
@@ -84,7 +82,10 @@ comprehension and question answering.
 <br>
 We propose a COarse-to-Fine highlighTing method (COFT) that promotes LLMs to focus on key lexical units, preserving complete contextual semantics and avoiding getting lost in long contexts. COFT highlights different granularity-level lexical units in a coarse-to-fine manner, such as paragraphs, sentences, and words. COFT organically integrates three modules in a unified framework.
 
-### Recaller
+<div align="center">
+  <h2>Recaller</h2>
+</div>
+
 The workflow of Recaller is as follows:
 
 (i) Recaller first conducts named entity recognition on the query to extract named entities that represent keywords within the query. These entities include specific terms and important nouns such as people, places, organizations, etc.
@@ -95,7 +96,10 @@ The workflow of Recaller is as follows:
 
 <br>
 
-### Scorer
+<div align="center">
+  <h2>Scorer</h2>
+</div>
+
 We illustrate the Scorer algorithm in Algorithm 1.
 
 <center>
@@ -110,7 +114,10 @@ We illustrate the Scorer algorithm in Algorithm 1.
     </div>
 </center>
 
-### Selector
+
+<div align="center">
+  <h2>Selector</h2>
+</div>
 The workflow of Selector is as follows:
 
 (i) Split the reference context according to the granularity of selected lexical units.
